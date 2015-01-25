@@ -1,0 +1,83 @@
+Your task is to develop a simplified virtual pet app.  At this time, we will not worry about the user interface.  We’ll focus instead on the underlying object oriented implementation.
+
+You will create a pet prototype.  Use an object literal to create the pet prototype:
+
+var pet = {...};
+
+All pets are created hungry and healthy.  All pets have two Boolean properties:
+
+hungry: will be initialized to true.
+
+ill: will be initialized to false.
+
+Most pets have names.   If the pets have a name, they are referred to by that name.   If they don’t have a name, they get the default name 'Your Pet' (think inheritance).
+
+All pets need to be fed.  When they are fed, they are no longer hungry.
+
+You’ll need to define a feed() method on the pet prototype. 
+
+You’ll also define a check() method on the pet prototype.
+
+To check on a pet, you basically need to check ALL their Boolean properties and report back to the pet owner on any property that is true.
+
+Finally you need to define a newDay() method for the pet object.
+
+When newDay() is invoked, all the Boolean properties of the pet object that the method was invoked on are set to true.
+
+You will also create a fish prototype that will use the pet object as its prototype. 
+
+Use Object.create() to create the fish prototype.
+
+fish will inherit all the properties of pet and define one additional method:  clean().
+
+Fish need to have their tank cleaned to stay healthy so when you invoke clean() on a fish, their ill property (initially inherited from pet) is set to false.
+
+Finally you will create a dog prototype that will also inherit from pet.
+
+Use Object.create() to create the dog prototype.
+
+In addition to food, dogs need to be walked.  That’s how they stay healthy.  You also need to play with them so that they are not lonely.  You'll define two methods on the dog prototype: walk() and play().
+
+The dog prototype will have one direct Boolean property lonely that will be initially set to false but will get set to true whenever newDay() is invoked.  Of course when you play with a dog, they are no longer lonely.
+
+Testing:
+
+Once you have created your three prototypes, you’ll be able to run the test scenario described in the file, VirtualPetTestScenario.pdf with a pet fish named Wanda and a pet dog named Fido. The file VirtualPetTestScenario.pdf is available under Resources -> Assignment 3 Files.
+
+As illustrated in the test scenario, the various methods return text strings such as 'Good morning' and 'Fido is full'.   More details on that are included in the template file virtualpet.js, also available under Resources.  Make sure you read the comments provided for each method.
+
+The template virtualpet.js also includes the JavaScript code to run the above scenario. The expected console output is documented there. It is also included in VirtualPetTestScenario.pdf. Feel free to add your own test cases.
+
+How do I get started?
+
+Download or copy and paste the template file virtualpet.js available under Resources. Then go to Komodo Edit or Scratchpad and open it from there.  You can then complete the assignment by modifying it then running it in Scratchpad.
+
+How do I submit my work?
+
+Upload your solution in the modified file virtualpet.js.  Just make sure you test it first.  Compare your console output to the expected output.
+
+Grading Rubric:
+
+Pet prototype:  40 points total
+
+Object creation and initialization: 6 points
+
+newDay(): 14 points
+
+check():  14  points
+
+feed() : 6 points
+
+Fish Prototype: 12 points total
+
+Object creation and initialization: 6 points
+
+clean: 6 points
+
+Dog Prototype: 18 points total
+
+Object Creation and initialization: 6 points
+
+walk(): 6 points
+
+play(): 6 points

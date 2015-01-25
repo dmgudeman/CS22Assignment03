@@ -1,0 +1,14 @@
+Make sure that you don’t hard code the property names in check() and newDay().  These methods have to discover the properties of the object.  Consider using for… in as illustrated in module 6.4.  But make sure you include some test so that you don't set non-Boolean properties such as name, age or methods to true in newDay().
+
+Make sure you avoid the following common mistakes:
+
+1.  =  sign in conditional statements
+if (myVariable = someValue) {...   // this is WRONG
+In module 2.7, we pointed out that a single equal sign = is  NOT a comparison operator.  
+The single equal sign indicates an assignment.  It is used to assign a value to a variable.  
+if (myVariable === someValue) {...   // this is CORRECT - == also works
+ 
+2.  Inside a method, make sure that you use the keyword 'this' to point to the object that the method was invoked on.  Otherwise you'll be changing and/or accessing the properties of the prototype object.
+Module 5.4 has an example on how to use 'this' in methods so that the methods would work in inherited objects.
+ 
+3.  Make sure you don't place your return statement inside the for loop.  When you do, only one iteration of the loop is executed, (only one property is checked or is set) and the function is exited.
